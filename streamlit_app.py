@@ -89,13 +89,13 @@ df["id_segmentation"] = df["id_segmentation"].map(mapping_dict)
 st.sidebar.header("Please Filter Here: ")
 
 won_mes = st.sidebar.multiselect(
-    "select the month:",
+    "Escolha o mês:",
     options=df["won_mes"].unique(),
     default=df["won_mes"].unique()
 )
 
 won_year = st.sidebar.multiselect(
-    "select the Customer Type:",
+    "Escolha o Ano:",
     options=df["won_year"].unique(),
     default=df["won_year"].unique()
 )
@@ -120,8 +120,7 @@ Total = df_selection["title"].count()
 column = st.columns(3)
 
 with column[0]:  # Ajuste o índice conforme necessário
-    st.subheader("Total:")
-    st.subheader(str(Total))
+    st.dataframe(df_selection[["title","id_segmentation","id_lead_origin"]])
 
 # Montando o gráfico ==========
 with column[1]:
@@ -179,7 +178,8 @@ with column[2]:
     st.plotly_chart(fig2, use_container_width=True)
 
 # PErsonalizando =====================
-
+ st.subheader("Total:")
+    st.subheader(str(Total))
 
 # Fundo personalizado
 
@@ -189,5 +189,5 @@ with column[2]:
 
 # Dropando o streamlit XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
 
-st.dataframe(df_selection[["title","id_segmentation","id_lead_origin"]])
+
 
