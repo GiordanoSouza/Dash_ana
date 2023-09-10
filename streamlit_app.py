@@ -117,6 +117,7 @@ st.title(":bar_chart: Sales DashBoard")
 
 Total = df_selection["title"].count()
 
+
 column = st.columns(3)
 
 with column[0]:  # Ajuste o índice conforme necessário
@@ -176,10 +177,11 @@ with column[2]:
         )
 
     st.plotly_chart(fig2, use_container_width=True)
-
+  
+st.subheader("Total:")
+st.subheader(str(Total))
 # PErsonalizando =====================
- st.subheader("Total:")
-    st.subheader(str(Total))
+
 
 # Fundo personalizado
 
