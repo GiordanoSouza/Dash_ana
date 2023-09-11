@@ -178,7 +178,7 @@ with column[2]:
 
     st.plotly_chart(fig2, use_container_width=True)
   
-st.subheader("Total:")
+st.subheader("Total de Leads no período:")
 st.subheader(str(Total))
 # PErsonalizando =====================
 
