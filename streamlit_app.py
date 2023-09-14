@@ -121,7 +121,7 @@ Total = df_selection["title"].count()
 column = st.columns(3)
 
 with column[0]:  # Ajuste o índice conforme necessário
-    st.dataframe(df_selection[["title","id_segmentation","id_lead_origin"]])
+    st.dataframe(df_selection)
 
 # Montando o gráfico ==========
 with column[1]:
